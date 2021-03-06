@@ -13,11 +13,11 @@
 #		2 ==> Formato della durata non corretto
 
 #Telecamere
-RTSP_URL="rtsp://192.168.1.93/stream0#"
+RTSP_URL="rtsp://192.168.1.93/stream0"
 RTSP_URL2="rtsp://user:psw@192.168.0.102:554"
 
 #Streaming su YouTube
-YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"#
+YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"
 #YOUTUBE_KEY="0u7z-3w3v-2ks0-7khr-ef5m"
 
 #Streaming su Facebook
