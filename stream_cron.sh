@@ -79,6 +79,7 @@ else
 		-f lavfi -i anullsrc \
 		-rtsp_transport tcp -i ${RTSP_URL} \
 		-map 0:a -map 2:v \
+		-vtag 7 \
 		-tune zerolatency \
 		-vcodec libx264 \
 		-t ${DURATION} \
@@ -86,9 +87,8 @@ else
 		-c:v copy \
 		-c:a aac \
 		-strict experimental \
-		-filter:a "volume=0.1" \
 		-b:v 5M \
-		-f flv ${YOUTUBE_URL}/${YOUTUBE_KEY} \
+		-f tee "[f=flv]${YOUTUBE_URL}/${YOUTUBE_KEY}|[f=flv]${FACEBOOK_URL}/${FACEBOOK_KEY}" \		
 		-nostdin -nostats
         #$COMMAND &
         #$COMMAND2 &
